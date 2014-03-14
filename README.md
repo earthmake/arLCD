@@ -1,7 +1,6 @@
 arLCD
 =====
 
-arLCD Files firmware and docs
+arLCD firmware
 
-arLCD2.10Beta2.hex current beta firmware 
-
+arLCD2.11
