@@ -1,5 +1,6 @@
 // 
-// Modified by Rich Obermeyer 1/14/2014.
+// Modified by Rich Obermeyer January 14, 2014.
+// Modified by Jonathan Doerr March 24, 2014.
 // Copyright 2013 - Under creative commons license 3.0:
 //        Attribution-ShareAlike CC BY-SA
 //
@@ -10,8 +11,6 @@
 *  (c)2013 EarthLCD
 *  ken@earthlcd.com
 *  !!!!! copy em.gif o.gif and x.gif from this directory to you arlcd \ezusers\images
-*  !!!!! make sure you have the line below in your startup.ezm !!!!!
-*  cfgio 9 touch_int low quiet
 *
 *  This test code uses touch interrupt of the GPU to Signal touch events
 *  Using Interrupts offloads the arduino from having to poll for touch events
@@ -40,9 +39,11 @@ unsigned long touch;
 void setup()
 {
   lcd.begin( EZM_BAUD_RATE );
+  lcd.sendCommand("cfgio 9 touch_int low quiet");  // allows interupts to work properly
   showMainScreen();
   pinMode( LED_PIN, OUTPUT );
   digitalWrite( LED_PIN, LOW );
+  
   attachInterrupt(0, ezLCDevent, LOW);  
   ezLCDInt = false;
 }
