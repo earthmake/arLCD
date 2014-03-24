@@ -1,0 +1,8 @@
+# See: http://www.earthmake.com
+
+arLCDisp.name=arLCD ISP
+arLCDisp.communication=serial
+arLCDisp.protocol=stk500v1
+arLCDisp.program.tool=avrdude
+arLCDisp.program.extra_params=-P{serial.port}
+
