@@ -1,6 +1,4 @@
 arLCD
 =====
 
-arLCD firmware
-
-arLCD2.11
+arLCD Documents, Examples, Filesystem and Tools
