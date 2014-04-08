@@ -1,4 +1,4 @@
 arLCD
 =====
 
-arLCD Documents, Examples, Filesystem and Tools
+arLCD firmware and filesystem.
